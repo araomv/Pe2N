@@ -1,0 +1,179 @@
+<!-- saved from url=(0058)http://homepages.inf.ed.ac.uk/zwu2/demo/icassp16/lstm.html -->
+<html class="gr__homepages_inf_ed_ac_uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+    <link href="Pe2N_files/css.html" rel="stylesheet">
+
+    
+    <style type="text/css">
+        .title {
+            text-align: center;
+        }
+
+        table.table, table.table thead, table.table tbody, table.table tr {
+            width: 100%;
+        }
+
+            table.table tr > td {
+                font-weight: bold;
+                font-size: 1.2em;
+                vertical-align: middle;
+                border-right: 2px solid black;
+            }
+
+            table.table tr > td:nth-child(even) {
+                border-right: 1px solid #bbb;
+            }
+
+            table.table thead {
+                background-color: #f5f5f5;
+            }
+
+        table.table tr > td.name {
+            text-align: center;
+            border-right: 2px solid black; !important;
+        }
+
+        .author {
+            font-style: italic;
+        }
+
+        .affiliations {
+            vertical-align: bottom;
+            margin-top: 25px;
+            margin-bottom: -30px;
+        }
+
+            .affiliations > div + div {
+                text-align: right;
+            }
+
+            .affiliations img {
+                max-width: 150px;
+                margin-left: 10px;
+            }
+
+                .affiliations img.edinburgh {
+                    height: 75px;
+                }
+
+                .affiliations img.ntu {
+                    margin-top: 10px;
+                }
+
+        .imgButton {
+            height: 20px;
+        }
+
+        .samples {
+            text-align: center;
+        }
+
+        /*.samples .sample:nth-child(even) {
+            text-align: right;
+        }
+
+        .samples.odd .sample:nth-child(even) {
+            text-align: left;
+        }
+
+        .samples .sample:nth-child(odd) {
+            text-align: left;
+        }
+
+        .samples.odd .sample:nth-child(odd) {
+            text-align: right;
+        }*/
+
+        .proposed {
+            font-style: italic;
+            background-color: #ddd;
+        }
+    </style>
+
+    <script src="Pe2N_files/modernizr.html"></script>
+
+<title>Pe2N</title>
+</head><body data-gr-c-s-loaded="true" vlink="#760076" text="#000000" link="#0000a3" bgcolor="#ffffff" alink="#ff0000">
+<center>
+<a name="top"></a>
+
+<table width="1000">
+<tbody><tr>
+<td>
+
+<hr> <center> <h2 style="color:blue">Reconstructing neutral speech from prosthetic esophageal speech</h2> </center>
+<hr>
+
+<h4>Samples to support the Interspeech 2018 (<a href="http://interspeech2018.org/" target="_blank">Visit Interspeech 2018 here</a>) submission titled above. More details can be found in our paper. If you have any questions, please drop us an email: <a href="mailto:nainireddy@iisc.ac.in" target="_blank">nainireddy@iisc.ac.in</a> (Abinay Reddy),<a href="mailto:achuthr@iisc.ac.in" target="_blank">achuthr@iisc.ac.in</a>(<wbr>Achuth Rao M V),<a href="mailto:nishag@iisc.ac.in" target="_blank">nishag@iisc.ac.in</a>(G. Nisha Meenakshi),<a href="mailto:prasantg@iisc.ac.in" target="_blank">prasantg@iisc.ac.in</a><wbr>(Prasanta Kumar Ghosh)</h4>
+<hr>
+<p> <b>This page contains following samples:</b><br>
+</p><ol> 
+<li><b>PE-Speech</b>: These are the recorded speech from a larygectomee.</li>
+<li><b>Baseline-1(B1)</b>: These are reconstructed neutral speech from PE speech without whisperizing it prior to the neutral speech synthesis.</li>
+<li><b>Baseline-2(B2)</b>: These are similar to B1, with residual substituted with Gaussian white noise in neutral speech synthesis. </li>
+<li><b>Baseline-3(B3)</b>:These are reconstructed neutral speech from PE speech using a method proposed by Mcloughlin et. al(<a href="https://dl.acm.org/citation.cfm?id=2737724/" target="_blank">link</a>)   </li>
+<li><b>Baseline-4(B4)</b>: These are similar to B3, While B3 takes the PE speech, directly as input, B4 considers the whisperized speech as input. </li>
+<li><b>Pe2N</b>: These are reconstructed neutral speech using proposed PE-Speech to neutral speech conversion method.
+<br>
+</li></ol>
+<hr>
+<table border="1" align="center">
+<tbody><tr>
+<td width="120" height="40">sample no</td>
+<td width="120" height="40">(PE) speech</td>
+<td width="120" height="40">B1</td>
+<td width="120" height="40">B2</td>
+<td width="120" height="40">B3</td>
+<td width="120" height="40">B4</td>
+<td width="120" height="40">Pe2N</td>
+</tr>
+<tr>
+<td>1</td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/1_003.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/1_006.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/1_004.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/1_002.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/1_005.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/1.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+</tr>
+<tr>
+<td>2</td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/2_004.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/2_003.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/2_002.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/2_006.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/2.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/2_005.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+</tr>
+<tr>
+<td>3</td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/3_005.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/3.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/3_003.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/3_002.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/3_006.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/3_004.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+</tr>
+<tr>
+<td>4</td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/4_005.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/4.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/4_002.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/4_004.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/4_006.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+<td><a onclick="this.firstChild.play()"><audio><source src="Pe2N_files/4_003.wav"></audio><img alt="" src="Pe2N_files/audio.gif" width="30" height="30"></a></td>
+</tr>
+
+</tbody></table> 
+</td></tr></tbody></table> 
+
+<p>Download the derivations related to the paper and the list of voiced only sentences used: <a href="http://www.ee.iisc.ac.in/new/people/students/phd/aravindsp/Pe2N/files/pathological_speech_to_neural_speech_sm.pdf" download="derivation">here </a></p><p><a href="http://www.ee.iisc.ac.in/new/people/students/phd/aravindsp/Pe2N/files/pathological_speech_to_neural_speech_sm.pdf" download="derivation">
+</a></p></center><a href="http://www.ee.iisc.ac.in/new/people/students/phd/aravindsp/Pe2N/files/pathological_speech_to_neural_speech_sm.pdf" download="derivation">
+
+ <script src="Pe2N_files/audiobutton.html"></script>
+
+
+
+</a></body></html>
